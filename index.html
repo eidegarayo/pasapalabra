@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Pasapalabra</title>
+	<link rel="stylesheet" href="css/style.css">
+  <script src="js/pasapalabra.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Kalam:700" rel="stylesheet">
+  <meta name="viewport" content="width=320, initial-scale=1">
+</head>
+
+<body>
+	
+  <div id="main" class="container">
+    
+    <div id="screen2"></div><!-- inside elements created in js -->
+
+    <div id="screen1">
+
+      <div id="counters">
+        <div id="seconds">130</div>
+        <div id="points">0</div><img id="star" src="img/points-icon.png">
+      </div>
+    
+      <ul class="circle-container">
+        <li class="circle blue" id="a">A</li>
+        <li class="circle blue" id="b">B</li>
+        <li class="circle blue" id="c">C</li>
+        <li class="circle blue" id="d">D</li>
+        <li class="circle blue" id="e">E</li>
+        <li class="circle blue" id="f">F</li>
+        <li class="circle blue" id="g">G</li>
+        <li class="circle blue" id="h">H</li>
+        <li class="circle blue" id="i">I</li>
+        <li class="circle blue" id="j">J</li>
+        <li class="circle blue" id="l">L</li>
+        <li class="circle blue" id="m">M</li>
+        <li class="circle blue" id="n">N</li>
+        <li class="circle blue" id="ñ">Ñ</li>
+        <li class="circle blue" id="o">O</li>
+        <li class="circle blue" id="p">P</li>
+        <li class="circle blue" id="q">Q</li>
+        <li class="circle blue" id="r">R</li>
+        <li class="circle blue" id="s">S</li>
+        <li class="circle blue" id="t">T</li>
+        <li class="circle blue" id="u">U</li>
+        <li class="circle blue" id="v">V</li>
+        <li class="circle blue" id="x">X</li>
+        <li class="circle blue" id="y">Y</li>
+        <li class="circle blue" id="z">Z</li>
+      </ul>
+
+      <div id="buttons">
+        <button id="quit" class="red" onclick="giveUp()" disabled="true">ABANDONO</button>
+        <input id="answer" placeholder="Tu respuesta..." >
+        <button id="pasapalabra" class="orange" onclick="pasapalabra()" disabled="true">PASAPALABRA</button>
+        <button id="risk" class="green" onclick="toAnswer()" disabled="true">ARRIESGAR</button>
+      </div>
+      
+      <div id="rendered"></div>
+      
+      <div id="question">
+        <p id="start"></p>
+        <p id="letter"></p>
+        <p id="definition"></p>
+      </div>
+
+      <button id="play" class="blue" onclick="pasapalabraStart()">Jugar</button>
+      <input id="name" placeholder="Tu nombre..." autofocus>
+      <button id="sendName" class="blue" onclick="sendName()">Enviar</button>
+    </div>
+  </div>
+
+</body>
+</html>

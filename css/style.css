@@ -1,0 +1,258 @@
+/* === GENERALS === */
+* {
+  margin: 0;
+  padding: 0;
+}
+html { 
+  overflow-y: hidden; 
+}
+body{
+  font-family: 'Kalam', cursive;
+  font-size: 16px;
+}
+
+/* === COLORS === */
+.blue {background-color: #2980B9;}
+.green {background-color: #2ECC71;}
+.red {background-color: #E74C3C;}
+.orange{background-color: #F39C12;}
+.iceberg {background-color: #74B3CE;}
+
+/* === CONTAINER === */
+.container {
+  background-size: 145px;
+  background-color: #74B3CE;
+  padding-top: 20px;
+  text-align: center;
+  width: 500px;
+  height: 620px;
+  display: block;
+  margin: 10px auto;
+  background-image: url('../img/chica-lista.png');
+  background-position: 345px 300px;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+/* === TIME AND POINTS === */
+#counters {
+  display: table;
+  width: 100%;
+}
+#seconds {
+  float: left;
+  display: inline-block;
+  width: 50px;
+  background-color: #000;
+  color: #2ECC71;
+  margin-left: 20px;
+  padding: 6px 20px 4px;
+  font-size: 1.5rem;
+  border: 3px dotted #2980B9;
+  border-radius: 15px;
+}
+.noTime {
+  margin-top: 1em;
+}
+#star {
+  float: right;
+  position: relative;
+  right: -22px;
+  width: 30px;
+  height: auto;
+}
+#points {
+  float: right;
+  text-align: right;
+  display: inline-block;
+  width: 50px;
+  background-color: #000;
+  color: #fff;
+  margin-right: 20px;
+  margin-top: 5px;
+  padding: 3px 15px 1px 20px;
+  font-size: 1.5rem;
+}
+
+/* === QUESTIONS === */
+#question, #rendered {
+  word-wrap: break-word;
+  margin: auto;
+  width: 310px;
+  height: 250px;
+  position: relative;
+  top: -560px;
+  color: #fff;
+  font-size: 1.2rem;
+}
+#question #letter {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+#rendered {
+  display: none;
+}
+
+/* === BUTTONS === */
+#buttons {
+  margin-top: -45px;
+}
+#answer, #name {
+  font-family: 'Kalam', cursive;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 90%;
+  padding: 8px 0;
+  border: 1px solid #000;
+  background-color: #fff;
+}
+button {
+  cursor: pointer;
+  color: #fff;
+  font-family: 'Kalam', cursive;
+  font-size: 1.5rem;
+  margin: 15px 4px;
+  padding: 10px;
+  width: 215px;
+  border-radius: 5px;
+  border-style: none;
+  -webkit-transition: all 2s;
+  transition: all 0.2s;
+}
+
+button:focus{
+  outline: none;
+}
+#pasapalabra:hover {
+  background-color: #f28213;
+}
+#risk:hover {
+  background-color: #29b262;
+}
+#quit:hover {
+  background-color: #bf3d31;
+}
+#quit {
+  font-size: 1rem;
+  margin: 15px 4px;
+  padding: 5px;
+  position: relative;
+  left: -150px;
+  width: 150px;
+}
+#play {
+  position: relative;
+  top: -710px;
+  margin: 0 auto;
+  transition: all 1s;
+}
+#play:hover,
+#sendName:hover,
+#showRanking:hover,
+#anotherGame:hover {
+  background-color: #20628c;
+}
+#name {
+  margin: 0 auto 20px;
+  position: relative;
+  top: -740px;
+  width: 280px;
+  display: none;
+}
+#sendName {
+  margin: 0 auto;
+  position: relative;
+  top: -750px;
+  display: none;
+}
+
+/* === RANKING ===*/
+#ranking {
+  width: 300px;
+  margin: 20px auto;
+  text-align: left;
+}
+
+#ranking p {
+  color: #fff;
+  font-size: 2rem;
+}
+
+/* === LETTERS === */
+.circle-container {
+  top: -55px;
+  margin: 0 auto;
+  position: relative;
+  width: 400px;
+  height: 400px;
+  padding: 0;
+  border-radius: 50%;
+  list-style: none;
+  box-sizing: content-box;
+}
+.circle {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid white;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 1.8em;
+  margin: -17px;
+}
+
+.circle-container > :nth-of-type(1) {
+  transform: rotate(270deg) translate(180px) rotate(-270deg); }
+.circle-container > :nth-of-type(2) {
+  transform: rotate(284deg) translate(180px) rotate(-284deg); }
+.circle-container > :nth-of-type(3) {
+  transform: rotate(298deg) translate(180px) rotate(-298deg); }
+.circle-container > :nth-of-type(4) {
+  transform: rotate(312deg) translate(180px) rotate(-312deg); }
+.circle-container > :nth-of-type(5) {
+  transform: rotate(327deg) translate(180px) rotate(-327deg); }
+.circle-container > :nth-of-type(6) {
+  transform: rotate(341deg) translate(180px) rotate(-341deg); }
+.circle-container > :nth-of-type(7) {
+  transform: rotate(356deg) translate(180px) rotate(-356deg); }
+.circle-container > :nth-of-type(8) {
+  transform: rotate(10deg) translate(180px) rotate(-10deg); }
+.circle-container > :nth-of-type(9) {
+transform: rotate(25deg) translate(180px) rotate(-25deg); }
+.circle-container > :nth-of-type(10) {
+transform: rotate(40deg) translate(180px) rotate(-40deg); }
+.circle-container > :nth-of-type(11) {
+transform: rotate(54deg) translate(180px) rotate(-54deg); }
+.circle-container > :nth-of-type(12) {
+transform: rotate(68deg) translate(180px) rotate(-68deg); }
+.circle-container > :nth-of-type(13) {
+transform: rotate(83deg) translate(180px) rotate(-83deg); }
+.circle-container > :nth-of-type(14) {
+transform: rotate(98deg) translate(180px) rotate(-98deg); }
+.circle-container > :nth-of-type(15) {
+transform: rotate(112deg) translate(180px) rotate(-112deg); }
+.circle-container > :nth-of-type(16) {
+transform: rotate(127deg) translate(180px) rotate(-127deg); }
+.circle-container > :nth-of-type(17) {
+transform: rotate(141deg) translate(180px) rotate(-141deg); }
+.circle-container > :nth-of-type(18) {
+transform: rotate(155deg) translate(180px) rotate(-155deg); }
+.circle-container > :nth-of-type(19) {
+transform: rotate(169deg) translate(180px) rotate(-169deg); }
+.circle-container > :nth-of-type(20) {
+transform: rotate(184deg) translate(180px) rotate(-184deg); }
+.circle-container > :nth-of-type(21) {
+transform: rotate(198deg) translate(180px) rotate(-198deg); }
+.circle-container > :nth-of-type(22) {
+transform: rotate(212deg) translate(180px) rotate(-212deg); }
+.circle-container > :nth-of-type(23) {
+transform: rotate(227deg) translate(180px) rotate(-227deg); }
+.circle-container > :nth-of-type(24) {
+transform: rotate(241deg) translate(180px) rotate(-241deg); }
+.circle-container > :nth-of-type(25) {
+  transform: rotate(255deg) translate(180px) rotate(-255deg); }
